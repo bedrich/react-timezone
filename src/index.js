@@ -35,6 +35,7 @@ export default class TimezonePicker extends React.Component {
 				style={this.props.style}>
 				<div className="timezone-picker-textfield">
 					<input type="text"
+						name={this.props.name}
 						placeholder={this.props.placeholder}
 						onFocus={this.handleFocus.bind(this)}
 						onBlur={this.handleBlur.bind(this)}
@@ -130,3 +131,4 @@ export default class TimezonePicker extends React.Component {
 		return timezones[currentValue];
 	}
 }
+TimezonePicker.defaultProps = { name: 'timezone' };
